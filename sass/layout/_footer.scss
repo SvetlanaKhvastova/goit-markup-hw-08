@@ -1,0 +1,35 @@
+.footer {
+  background-color: #2f303a;
+}
+
+.footer-flex {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(mobile) {
+    text-align: center;
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include for-size(desktop) {
+    text-align: start;
+  }
+}
+
+@include for-size(desktop) {
+  .footer-flex > :not(:last-child) {
+    align-items: baseline;
+    width: calc((50% - 45px) / 2);
+    margin-right: 30px;
+  }
+
+  .footer-flex > div:last-child {
+    align-items: baseline;
+    width: calc(50% - 15px);
+  }
+}

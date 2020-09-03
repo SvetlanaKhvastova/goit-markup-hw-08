@@ -1,0 +1,130 @@
+.portfolio-main {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+
+.portfolio-point {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-element {
+  display: block;
+  background: $primary-background-color;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(2n) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(3n) {
+    @include for-size(desktop) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 3) {
+    @include for-size(desktop) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow $time-hover-focus $time-function;
+  }
+}
+
+.portfolio-link {
+  color: $primary-text-color;
+
+  &:hover .portfolio-text,
+  &:focus .portfolio-text {
+    opacity: 1;
+    overflow: visible;
+    transform: translateY(0);
+    transition: transform $time-hover-focus $time-function;
+  }
+}
+
+.portfolio-content {
+  padding: 20px 24px;
+}
+
+.portfolio-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: $title;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-filter {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.box-hover {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.portfolio-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 1;
+  transform: translateY(100%);
+  transition: transform $time-hover-focus $time-function;
+}
+
+.text-card {
+  padding: 0;
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: $secondary-text-color;
+}

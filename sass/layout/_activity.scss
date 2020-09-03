@@ -1,0 +1,60 @@
+.activity {
+  @include for-size(mobile) {
+    display: none;
+  }
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+@include for-size(desktop) {
+  .activity-main {
+    padding-top: 0;
+    padding-bottom: 94px;
+  }
+
+  .activity-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: $title;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+
+  .activity-point {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .activity-element {
+    position: relative;
+    flex-wrap: wrap;
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .activity-images {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .activity-title-list {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    min-width: 370px;
+
+    color: $secondary-text-color;
+    background-color: rgba(47, 48, 58, 0.8);
+    text-transform: uppercase;
+  }
+}

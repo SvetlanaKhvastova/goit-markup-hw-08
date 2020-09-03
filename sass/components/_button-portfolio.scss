@@ -1,0 +1,51 @@
+.portfolio-primary-button {
+  padding-top: 93px;
+  padding-bottom: 34px;
+}
+
+.portfolio-primary-title {
+  @extend %hidden;
+}
+
+.button-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include for-size(tablet) {
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.button-portfolio-links:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-portfolio.primary {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  color: $title;
+  background-color: #f5f4fa;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  cursor: pointer;
+
+  transition: color $time-hover-focus $time-function,
+    background-color $time-hover-focus $time-function;
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+    background-color: $accent;
+
+    transition: color $time-hover-focus $time-function,
+      background-color $time-hover-focus $time-function;
+  }
+}

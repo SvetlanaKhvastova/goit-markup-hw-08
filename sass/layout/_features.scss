@@ -1,0 +1,127 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-title.visually-hidden {
+  @extend %hidden;
+}
+
+.features-point {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.features-point-element {
+  outline: 2px solid tomato;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(2n) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(desktop) {
+    flex-wrap: wrap;
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
+
+  &:nth-child(4n) {
+    @include for-size(desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.antenna::before {
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: block;
+  content: "";
+  height: 120px;
+  background-image: url(../images/svg/antenna.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+}
+
+.clock::before {
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: block;
+  content: "";
+  height: 120px;
+  background-image: url(../images/svg/clock.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+}
+
+.diagram::before {
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: block;
+  content: "";
+  height: 120px;
+  background-image: url(../images/svg/diagram.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+}
+
+.astronaut::before {
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: block;
+  content: "";
+  height: 120px;
+  background-image: url(../images/svg/astronaut.svg);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+}
+
+.features-list {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $title;
+  text-transform: uppercase;
+}
+
+.features-text {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.71;
+}

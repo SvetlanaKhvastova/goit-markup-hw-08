@@ -1,0 +1,151 @@
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-main {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: $title;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-point {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.team-list {
+  outline: 2px solid tomato;
+
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(2n) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(desktop) {
+    flex-wrap: wrap;
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
+
+  &:nth-child(4n) {
+    @include for-size(desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.team-images {
+  margin-top: 0;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.team-surname {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+
+  color: $title;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-position {
+  margin: 0;
+  text-align: center;
+
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-flex {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  padding-top: 16px;
+}
+
+.team-flex-links {
+  display: inline-flex;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-links {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  transition: fill $time-hover-focus $time-function,
+    background-color $time-hover-focus $time-function;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    transition: background-color $time-hover-focus $time-function;
+  }
+}
+
+.social-links:hover .network,
+.social-links:focus .network {
+  fill: $secondary-text-color;
+
+  transition: fill $time-hover-focus $time-function;
+}
+
+.network {
+  fill: #afb1b8;
+
+  transition: fill $time-hover-focus $time-function;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

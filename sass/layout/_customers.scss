@@ -1,0 +1,111 @@
+.customers-main {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: $title;
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.customers-point {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.customers-list {
+  flex-wrap: wrap;
+  border: 1px solid red;
+
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  &:nth-child(2n) {
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px * 2) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(3n) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-last-child(-n + 3) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 5) / 6);
+    margin-right: 30px;
+  }
+
+  /* border: 1px solid #afb1b8;
+  border-radius: 4px; */
+
+  &:nth-child(6n) {
+    @include for-size(desktop) {
+      margin-right: 0;
+    }
+  }
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: fill $time-hover-focus $time-function,
+    border $time-hover-focus $time-function;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent;
+
+    transition: border $time-hover-focus $time-function;
+  }
+
+  &:hover .customers-logo,
+  &:focus .customers-logo {
+    fill: $accent;
+
+    transition: fill $time-hover-focus $time-function;
+  }
+}
+
+.customers-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+
+  transition: fill $time-hover-focus $time-function;
+}

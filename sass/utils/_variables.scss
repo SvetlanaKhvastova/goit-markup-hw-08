@@ -1,0 +1,37 @@
+$primary-text-color: #757575;
+$secondary-text-color: #ffffff;
+$accent: #2196f3;
+$title: #212121;
+$logo: #000000;
+$contacts: rgba(255, 255, 255, 0.6);
+$primary-background-color: #ffffff;
+$secondary-background-color: #f5f4fa;
+$time-hover-focus: 250ms;
+$time-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* font-family основной Roboto, font-weight 400, 500, 700, 900 */
+/* font-family логотипа Raleway, font-weight 700 */
+
+@mixin for-size($range) {
+  $phone-upper-boundary: 480px;
+  $tablet-portrait-upper-boundary: 768px;
+  $desktop-upper-boundary: 1200px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) {
+      @content;
+    }
+  } @else if $range == mobile {
+    @media (min-width: $phone-upper-boundary) {
+      @content;
+    }
+  } @else if $range == tablet {
+    @media (min-width: $tablet-portrait-upper-boundary) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media (min-width: $desktop-upper-boundary) {
+      @content;
+    }
+  }
+}
