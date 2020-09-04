@@ -6,9 +6,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @include for-size(mobile) {
-    text-align: center;
-  }
+  text-align: center;
 
   @include for-size(tablet) {
     display: flex;

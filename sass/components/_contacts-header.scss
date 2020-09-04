@@ -1,9 +1,8 @@
 .contacts {
   outline: 1px solid red;
 
-  @include for-size(mobile) {
-    display: none;
-  }
+  display: none;
+
   @include for-size(tablet) {
     display: block;
     margin-left: auto;

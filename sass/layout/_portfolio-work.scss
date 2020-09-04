@@ -4,12 +4,13 @@
 }
 
 .portfolio-point {
-  display: flex;
-  flex-wrap: wrap;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio-element {
-  display: block;
   background: $primary-background-color;
   border: 1px solid #eeeeee;
   box-sizing: border-box;

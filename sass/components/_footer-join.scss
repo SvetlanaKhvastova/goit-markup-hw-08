@@ -5,10 +5,9 @@
   text-transform: uppercase;
 }
 .footer-join {
-  @include for-size(mobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   @include for-size(tablet) {
     padding: 0;
   }
@@ -20,9 +19,7 @@
   display: flex;
   text-align: center;
 
-  @include for-size(mobile) {
-    justify-content: center;
-  }
+  justify-content: center;
 
   @include for-size(desktop) {
     justify-content: start;
