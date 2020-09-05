@@ -1,6 +1,11 @@
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features-title.visually-hidden {
@@ -15,8 +20,6 @@
 }
 
 .features-point-element {
-  outline: 2px solid tomato;
-
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
       margin-bottom: 30px;
@@ -55,10 +58,12 @@
 }
 
 .antenna::before {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 30px;
   display: block;
   content: "";
+  max-width: 100%;
   height: 120px;
   background-image: url(../images/svg/antenna.svg);
   background-size: 70px;
@@ -69,10 +74,12 @@
 }
 
 .clock::before {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 30px;
   display: block;
   content: "";
+  max-width: 100%;
   height: 120px;
   background-image: url(../images/svg/clock.svg);
   background-size: 70px;
@@ -83,10 +90,12 @@
 }
 
 .diagram::before {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 30px;
   display: block;
   content: "";
+  max-width: 100%;
   height: 120px;
   background-image: url(../images/svg/diagram.svg);
   background-size: 70px;
@@ -97,10 +106,12 @@
 }
 
 .astronaut::before {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 30px;
   display: block;
   content: "";
+  max-width: 100%;
   height: 120px;
   background-image: url(../images/svg/astronaut.svg);
   background-size: 70px;
@@ -111,17 +122,27 @@
 }
 
 .features-list {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 10px;
 
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+
   color: $title;
   text-transform: uppercase;
+
+  @include for-size(tablet) {
+    text-align: start;
+  }
 }
 
 .features-text {
   padding: 0;
   margin: 0;
 
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
 }

@@ -8,13 +8,14 @@
 
 .address-link {
   display: block;
-  margin-top: 9px;
+  margin-top: 8px;
   margin-bottom: 0;
+  color: $contacts;
 
-  color: $primary-text-color;
-
-  font-size: 14px;
-  line-height: 1.71;
+  @include for-size(desktop) {
+    margin-top: 9px;
+    margin-bottom: 0;
+  }
 
   transition: color $time-hover-focus $time-function;
 

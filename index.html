@@ -17,7 +17,7 @@
       <div class="container header">
         <nav class="main-nav">
           <a lang="en" href="" class="logo">
-            <span class="accent">Web</span> Studio
+            <span class="accent">Web</span>Studio
           </a>
           <ul class="enumeration nav-list">
             <li class="nav-item">
@@ -52,6 +52,36 @@
           </ul>
         </nav>
       </div>
+      <div class="menu-mobile">
+        <ul class="enumeration">
+          <li class="nav-item">
+            <a href="" class="nav-link current">Студия</a>
+          </li>
+          <li class="nav-item">
+            <a href="./portfolio.html" class="nav-link">Портфолио</a>
+          </li>
+          <li class="nav-item"><a href="" class="nav-link">Контакты</a></li>
+        </ul>
+
+        <ul class="enumeration">
+          <li class="contacts-item">
+            <a href="mailto:info@devstudio.com" class="contacts-link envelope">
+              <svg class="contacts-images" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a href="tel:+380991111111" class="contacts-link smartphone">
+              <svg class="contacts-images" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!--Конец header-->
 
@@ -72,8 +102,8 @@
                   >Оставьте свои данные, мы вам перезвоним</b
                 >
                 <div class="form-field">
-                  <label for="name" class="hero-label">Имя</label>
                   <div class="form-hero-svg">
+                    <label for="name" class="hero-label">Имя</label>
                     <input
                       type="text"
                       id="name"
@@ -87,8 +117,8 @@
                 </div>
 
                 <div class="form-field">
-                  <label for="tel" class="hero-label">Телефон</label>
                   <div class="form-hero-svg">
+                    <label for="tel" class="hero-label">Телефон</label>
                     <input type="tel" id="tel" name="tel" class="hero-input" />
                     <svg class="form-poin" width="18" height="18">
                       <use href="./images/symbol-defs.svg#icon-tel"></use>
@@ -97,8 +127,8 @@
                 </div>
 
                 <div class="form-field">
-                  <label for="email" class="hero-label">Почта</label>
                   <div class="form-hero-svg">
+                    <label for="email" class="hero-label">Почта</label>
                     <input
                       type="email"
                       id="email"
@@ -112,13 +142,15 @@
                 </div>
 
                 <div class="form-field">
-                  <label for="comment" class="hero-label">Комментарий</label>
-                  <textarea
-                    name="textarea"
-                    id="comment"
-                    placeholder="Введите текст"
-                    class="hero-input textarea"
-                  ></textarea>
+                  <div class="form-hero-svg">
+                    <label for="comment" class="hero-label">Комментарий</label>
+                    <textarea
+                      name="textarea"
+                      id="comment"
+                      placeholder="Введите текст"
+                      class="hero-input textarea"
+                    ></textarea>
+                  </div>
                 </div>
 
                 <label class="hero-check">
@@ -193,30 +225,57 @@
           <h2 class="activity-title">Чем мы занимаемся</h2>
           <ul class="enumeration activity-point">
             <li class="activity-element">
-              <img
-                src="./images/desk.jpg"
-                alt="Ноутбук"
-                width="370"
-                class="activity-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/activity/desk.jpg    1x,
+                    ./images/desktop/activity/desk@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/desktop/activity/desk.jpg"
+                  alt="Ноутбук"
+                  width="370"
+                  class="activity-images"
+                />
+              </picture>
               <h3 class="activity-title-list desktop">Десктопные приложения</h3>
             </li>
             <li class="activity-element">
-              <img
-                src="./images/box.jpg"
-                alt="Телефон"
-                width="370"
-                class="activity-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/activity/box.jpg    1x,
+                    ./images/desktop/activity/box@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/desktop/activity/box.jpg"
+                  alt="Телефон"
+                  width="370"
+                  class="activity-images"
+                />
+              </picture>
               <h3 class="activity-title-list mobile">Мобильные приложения</h3>
             </li>
             <li class="activity-element">
-              <img
-                src="./images/tv.jpg"
-                alt="Монитор"
-                width="370"
-                class="activity-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/activity/tv.jpg    1x,
+                    ./images/desktop/activity/tv@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/desktop/activity/tv.jpg"
+                  alt="Монитор"
+                  width="370"
+                  class="activity-images"
+                />
+              </picture>
               <h3 class="activity-title-list designer">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -230,12 +289,35 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="enumeration team-point">
             <li class="team-list">
-              <img
-                src="./images/demyanenko.jpg"
-                alt="Парень"
-                width="270"
-                class="team-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/demyanenko.jpg    1x,
+                    ./images/desktop/team/demyanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/demyanenko.jpg    1x,
+                    ./images/tablet/team/demyanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/demyanenko.jpg    1x,
+                    ./images/mobile/team/demyanenko@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images//desktop/team/demyanenko.jpg"
+                  alt="Парень"
+                  width="270"
+                  class="team-images"
+                />
+              </picture>
               <h3 class="team-surname">Игорь Демьяненко</h3>
               <p lang="en" class="team-position">Product Designer</p>
               <ul class="enumeration team-flex">
@@ -286,12 +368,35 @@
               </ul>
             </li>
             <li class="team-list">
-              <img
-                src="./images/repin.jpg"
-                alt="Девушка"
-                width="270"
-                class="team-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/repin.jpg    1x,
+                    ./images/desktop/team/repin@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/repin.jpg    1x,
+                    ./images/tablet/team/repin@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/repin.jpg    1x,
+                    ./images/mobile/team/repin@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/desktop/team/repin.jpg"
+                  alt="Девушка"
+                  width="270"
+                  class="team-images"
+                />
+              </picture>
               <h3 class="team-surname">Ольга Репина</h3>
               <p lang="en" class="team-position">Frontend Developer</p>
               <ul class="enumeration team-flex">
@@ -342,12 +447,35 @@
               </ul>
             </li>
             <li class="team-list">
-              <img
-                src="./images/tarasov.jpg"
-                alt="Парень"
-                width="270"
-                class="team-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/tarasov.jpg    1x,
+                    ./images/desktop/team/tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/tarasov.jpg    1x,
+                    ./images/tablet/team/tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/tarasov.jpg    1x,
+                    ./images/mobile/team/tarasov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/desktop/team/tarasov.jpg"
+                  alt="Парень"
+                  width="270"
+                  class="team-images"
+                />
+              </picture>
               <h3 class="team-surname">Николай Тарасов</h3>
               <p lang="en" class="team-position">Marketing</p>
               <ul class="enumeration team-flex">
@@ -398,12 +526,35 @@
               </ul>
             </li>
             <li class="team-list">
-              <img
-                src="./images/ermakov.jpg"
-                alt="Парень"
-                width="270"
-                class="team-images"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team/ermakov.jpg    1x,
+                    ./images/desktop/team/ermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team/ermakov.jpg    1x,
+                    ./images/tablet/team/ermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team/ermakov.jpg    1x,
+                    ./images/mobile/team/ermakov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/desktop/team/ermakov.jpg"
+                  alt="Парень"
+                  width="270"
+                  class="team-images"
+                />
+              </picture>
               <h3 class="team-surname">Михаил Ермаков</h3>
               <p lang="en" class="team-position">UI Designer</p>
               <div class="team-links">
@@ -524,7 +675,7 @@
       <div class="container footer-flex">
         <div class="footer-nav">
           <a lang="en" href="" class="footer-logo">
-            <span class="accent">Web</span> Studio
+            <span class="accent">Web</span>Studio
           </a>
           <address class="address">
             г. Киев, пр-т Леси Украинки, 26 <br />
@@ -590,7 +741,6 @@
             <b class="footer-title">Подпишитесь на рассылку</b>
             <div class="fotter-area">
               <div class="fotter-email">
-                <!-- <label for="fotter-form" class="fotter-label">E-mail</label> -->
                 <input
                   type="email"
                   name="fotter-form"

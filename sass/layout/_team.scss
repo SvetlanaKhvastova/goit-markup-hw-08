@@ -3,19 +3,31 @@
 }
 
 .team-main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: $title;
 
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .team-point {
@@ -25,11 +37,12 @@
   }
 }
 .team-list {
-  outline: 2px solid tomato;
-
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767px) {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 
   &:not(:last-child) {
     @media screen and (max-width: 767px) {
@@ -41,6 +54,9 @@
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 
   &:nth-child(2n) {
@@ -59,6 +75,9 @@
     flex-wrap: wrap;
     width: calc((100% - 30px * 3) / 4);
     margin-right: 30px;
+
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
   }
 
   &:nth-child(4n) {
@@ -97,10 +116,19 @@
 .team-flex {
   display: flex;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 30px;
   padding-top: 16px;
+  padding-bottom: 24px;
+
+  @include for-size(tablet) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @include for-size(desktop) {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 30px;
+  }
 }
 
 .team-flex-links {
@@ -113,11 +141,13 @@
 
 .social-links {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100%;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
 
   transition: fill $time-hover-focus $time-function,
     background-color $time-hover-focus $time-function;

@@ -1,3 +1,10 @@
+.footer-follow {
+  @include for-size(desktop) {
+    padding-top: 12px;
+    padding-bottom: 0;
+  }
+}
+
 .fotter-form {
   display: block;
 
@@ -18,7 +25,10 @@
 
 .fotter-email {
   position: relative;
-  margin-right: 12px;
+
+  @include for-size(desktop) {
+    margin-right: 12px;
+  }
 }
 
 .fotter-input {
@@ -26,8 +36,14 @@
   padding: 15px 0 15px 16px;
 
   max-width: 100%;
-  width: 358px;
+  width: 450px;
   height: 50px;
+
+  @include for-size(desktop) {
+    max-width: 100%;
+    width: 358px;
+    height: 50px;
+  }
 
   font-size: 16px;
   line-height: 1.25;
@@ -35,7 +51,7 @@
 
   align-items: center;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: $contacts;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -68,7 +84,7 @@
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: #ffffff;
+  color: $secondary-text-color;
 
   background-color: $accent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -91,4 +107,8 @@
 .fotter-submit-poin {
   vertical-align: middle;
   fill: $primary-background-color;
+
+  max-width: 100%;
+  width: 24px;
+  height: 24px;
 }

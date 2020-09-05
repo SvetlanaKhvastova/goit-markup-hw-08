@@ -4,17 +4,22 @@
   color: $secondary-text-color;
   text-transform: uppercase;
 }
+
 .footer-join {
   padding-top: 60px;
   padding-bottom: 60px;
 
   @include for-size(tablet) {
-    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 0;
   }
+
   @include for-size(desktop) {
-    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 0;
   }
 }
+
 .join {
   display: flex;
   text-align: center;
@@ -35,6 +40,7 @@
   align-items: center;
   justify-content: center;
 
+  max-width: 100%;
   width: 44px;
   height: 44px;
   border-radius: 50%;

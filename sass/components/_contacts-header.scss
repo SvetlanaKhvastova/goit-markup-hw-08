@@ -1,6 +1,4 @@
 .contacts {
-  outline: 1px solid red;
-
   display: none;
 
   @include for-size(tablet) {
@@ -13,8 +11,6 @@
   @include for-size(desktop) {
     display: flex;
     margin-left: auto;
-    align-items: baseline;
-    justify-content: center;
   }
 }
 
@@ -32,6 +28,14 @@
 
   font-weight: 500;
   letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.167;
+
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.143;
+  }
+
   transition: color $time-hover-focus $time-function,
     fill $time-hover-focus $time-function;
 
@@ -49,11 +53,13 @@
 }
 
 .envelope {
+  max-width: 100%;
   width: 161px;
   height: 16px;
 }
 
 .smartphone {
+  max-width: 100%;
   width: 142px;
   height: 16px;
 }

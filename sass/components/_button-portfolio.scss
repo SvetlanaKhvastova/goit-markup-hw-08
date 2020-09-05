@@ -1,6 +1,16 @@
 .portfolio-primary-button {
-  padding-top: 93px;
-  padding-bottom: 34px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include for-size(tablet) {
+    padding-top: 93px;
+    padding-bottom: 30px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 93px;
+    padding-bottom: 34px;
+  }
 }
 
 .portfolio-primary-title {
@@ -18,7 +28,8 @@
   }
 }
 
-.button-portfolio-links:not(:last-child) {
+.button-portfolio-links {
+  margin-bottom: 15px;
   margin-right: 8px;
 }
 

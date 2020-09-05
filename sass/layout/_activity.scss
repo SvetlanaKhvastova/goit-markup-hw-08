@@ -5,6 +5,7 @@
     display: flex;
   }
 }
+
 @include for-size(desktop) {
   .activity-main {
     padding-top: 0;
@@ -28,7 +29,7 @@
 
   .activity-element {
     position: relative;
-    flex-wrap: wrap;
+
     width: calc((100% - 30px * 2) / 3);
     margin-right: 30px;
 
@@ -50,7 +51,9 @@
     padding-top: 27px;
     padding-bottom: 27px;
     text-align: center;
-    min-width: 370px;
+
+    max-width: 100%;
+    width: 370px;
 
     color: $secondary-text-color;
     background-color: rgba(47, 48, 58, 0.8);

@@ -10,7 +10,7 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -25,15 +25,28 @@
 
 .hero-label {
   margin-bottom: 4px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
   cursor: pointer;
 }
 
 .form-hero-svg {
   position: relative;
 
+  transition: fill $time-hover-focus $time-function,
+    color $time-hover-focus $time-function;
+
   &:hover .form-poin,
   &:focus .form-poin {
     fill: $accent;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:hover .hero-label,
+    &:focus .hero-label {
+      color: $accent;
+    }
   }
 }
 
@@ -43,7 +56,8 @@
   padding-right: 12px;
   padding-left: 42px;
   margin-bottom: 10px;
-  width: 100%;
+  max-width: 100%;
+  width: 370px;
   height: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -55,6 +69,12 @@
 
   &:last-child {
     margin-bottom: 20px;
+  }
+
+  @include for-size(desktop) {
+    max-width: 100%;
+    width: 448px;
+    height: 40px;
   }
 
   &:hover,
@@ -70,9 +90,12 @@
   position: absolute;
   top: 50%;
   left: 12px;
-  transform: translateY(-15px);
+  transform: translateY(-6px);
+
+  max-width: 100%;
   width: 18px;
   height: 18px;
+
   transition: fill $time-hover-focus $time-function;
 }
 
@@ -90,8 +113,18 @@
 }
 
 .hero-check {
-  padding-left: 25px;
+  padding-left: 19px;
   align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
+
+  @include for-size(desktop) {
+    padding-left: 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
 
 .checkbox {
@@ -104,7 +137,8 @@
 .hero-checkbox-svg {
   position: absolute;
   display: flex;
-  margin-left: 12px;
+
+  max-width: 100%;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -113,6 +147,11 @@
   vertical-align: middle;
   justify-content: center;
   align-items: center;
+
+  @include for-size(desktop) {
+    margin-left: 12px;
+  }
+
   transition: background-color $time-hover-focus $time-function,
     fill $time-hover-focus $time-function,
     border $time-hover-focus $time-function;
@@ -134,6 +173,8 @@
 .form-hero-button {
   padding: 10px 55px 10px 56px;
   margin-top: 30px;
+
+  max-width: 200px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;

@@ -1,6 +1,10 @@
 .portfolio-main {
   padding-top: 0px;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio-point {
@@ -104,6 +108,10 @@
   overflow: hidden;
 }
 
+.portfolio-foto {
+  max-width: 100%;
+}
+
 .portfolio-text {
   position: absolute;
   left: 0;
@@ -111,7 +119,15 @@
   width: 100%;
   height: 100%;
 
-  padding: 63px 24px;
+  padding: 77px 24px;
+
+  @include for-size(tablet) {
+    padding: 49px 24px;
+  }
+
+  @include for-size(desktop) {
+    padding: 63px 24px;
+  }
 
   background-color: rgba(33, 150, 243, 0.9);
 
