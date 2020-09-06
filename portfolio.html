@@ -19,6 +19,72 @@
           <a lang="en" href="" class="logo">
             <span class="accent">Web</span>Studio
           </a>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu-burger"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/symbol-defs.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="-menu-container" data-menu>
+            <div class="mobile-nav">
+              <ul class="enumeration burger-nav">
+                <li class="mobile-nav-item">
+                  <a href="./index.html" class="mobile-nav-link">Студия</a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./portfolio.html" class="mobile-nav-link current"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="" class="mobile-nav-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mobile-contacts">
+              <ul class="enumeration burger-contacts">
+                <li class="mobile-contacts-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="contacts-link envelope"
+                  >
+                    <svg class="contacts-images" width="16" height="12">
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="mobile-contacts-item">
+                  <a href="tel:+380991111111" class="contacts-link smartphone">
+                    <svg class="contacts-images" width="10" height="16">
+                      <use
+                        href="./images/symbol-defs.svg#icon-smartphone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <ul class="enumeration nav-list">
             <li class="nav-item">
               <a href="./index.html" class="nav-link">Студия</a>
@@ -97,12 +163,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio1.jpg"
-                    alt="На портфолио фото двух женщин и одного мужчины "
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio1.jpg    1x,
+                        ./images-portfolio/desktop/portfolio1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio1.jpg    1x,
+                        ./images-portfolio/tablet/portfolio1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio1.jpg    1x,
+                        ./images-portfolio/mobile/portfolio1@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio1.jpg"
+                      alt="На портфолио фото двух женщин и одного мужчины "
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -121,12 +210,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio2.jpg"
-                    alt="Два парня играют в баскетбол"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio2.jpg    1x,
+                        ./images-portfolio/desktop/portfolio2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio2.jpg    1x,
+                        ./images-portfolio/tablet/portfolio2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio2.jpg    1x,
+                        ./images-portfolio/mobile/portfolio2@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio2.jpg"
+                      alt="Два парня играют в баскетбол"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -147,12 +259,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio3.jpg"
-                    alt="Логотип рыбного ресторана"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio3.jpg    1x,
+                        ./images-portfolio/desktop/portfolio3@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio3.jpg    1x,
+                        ./images-portfolio/tablet/portfolio3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio3.jpg    1x,
+                        ./images-portfolio/mobile/portfolio3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio3.jpg"
+                      alt="Логотип рыбного ресторана"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -171,12 +306,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio4.jpg    1x,
+                        ./images-portfolio/desktop/portfolio4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio4.jpg    1x,
+                        ./images-portfolio/tablet/portfolio4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio4.jpg    1x,
+                        ./images-portfolio/mobile/portfolio4@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio4.jpg"
+                      alt="Наушники"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -195,12 +353,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio5.jpg"
-                    alt="Две коробки"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio5.jpg    1x,
+                        ./images-portfolio/desktop/portfolio5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio5.jpg    1x,
+                        ./images-portfolio/tablet/portfolio5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio5.jpg    1x,
+                        ./images-portfolio/mobile/portfolio5@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio5.jpg"
+                      alt="Две коробки"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -219,12 +400,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio6.jpg"
-                    alt="Черный монитор"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio6.jpg    1x,
+                        ./images-portfolio/desktop/portfolio6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio6.jpg    1x,
+                        ./images-portfolio/tablet/portfolio6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio6.jpg    1x,
+                        ./images-portfolio/mobile/portfolio6@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio6.jpg"
+                      alt="Черный монитор"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -243,12 +447,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio7.jpg"
-                    alt="Открытый журнал"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio7.jpg    1x,
+                        ./images-portfolio/desktop/portfolio7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio7.jpg    1x,
+                        ./images-portfolio/tablet/portfolio7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio7.jpg    1x,
+                        ./images-portfolio/mobile/portfolio7@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio7.jpg"
+                      alt="Открытый журнал"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -267,12 +494,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio8.jpg"
-                    alt="Лейбл"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio8.jpg    1x,
+                        ./images-portfolio/desktop/portfolio8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio8.jpg    1x,
+                        ./images-portfolio/tablet/portfolio8@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio8.jpg    1x,
+                        ./images-portfolio/mobile/portfolio8@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio8.jpg"
+                      alt="Лейбл"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -291,12 +541,35 @@
             <li class="portfolio-element">
               <a href="" class="portfolio-link">
                 <div class="box-hover">
-                  <img
-                    src="./images-portfolio/portfolio9.jpg"
-                    alt="Работа за ноутбуком"
-                    width="370"
-                    class="portfolio-foto"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images-portfolio/desktop/portfolio9.jpg    1x,
+                        ./images-portfolio/desktop/portfolio9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/tablet/portfolio9.jpg    1x,
+                        ./images-portfolio/tablet/portfolio9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images-portfolio/mobile/portfolio9.jpg    1x,
+                        ./images-portfolio/mobile/portfolio9@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images-portfolio/desktop/portfolio9.jpg"
+                      alt="Работа за ноутбуком"
+                      width="370"
+                      class="portfolio-foto"
+                    />
+                  </picture>
                   <div class="portfolio-text">
                     <p class="text-card">
                       Технокряк это современная площадка распространения
@@ -411,5 +684,7 @@
       </div>
     </footer>
     <!--Конец footer-->
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

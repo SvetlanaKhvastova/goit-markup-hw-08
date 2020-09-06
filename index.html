@@ -19,6 +19,71 @@
           <a lang="en" href="" class="logo">
             <span class="accent">Web</span>Studio
           </a>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu-burger"
+                href="./images/symbol-defs.svg#icon-menu"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/symbol-defs.svg#icon-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="-menu-container" data-menu>
+            <div class="mobile-nav">
+              <ul class="enumeration burger-nav">
+                <li class="mobile-nav-item">
+                  <a href="" class="mobile-nav-link current">Студия</a>
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="./portfolio.html" class="mobile-nav-link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-nav-item">
+                  <a href="" class="mobile-nav-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mobile-contacts">
+              <ul class="enumeration burger-contacts">
+                <li class="mobile-contacts-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="contacts-link envelope"
+                  >
+                    <svg class="contacts-images" width="16" height="12">
+                      <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="mobile-contacts-item">
+                  <a href="tel:+380991111111" class="contacts-link smartphone">
+                    <svg class="contacts-images" width="10" height="16">
+                      <use
+                        href="./images/symbol-defs.svg#icon-smartphone"
+                      ></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <ul class="enumeration nav-list">
             <li class="nav-item">
               <a href="" class="nav-link current">Студия</a>
@@ -28,7 +93,6 @@
             </li>
             <li class="nav-item"><a href="" class="nav-link">Контакты</a></li>
           </ul>
-
           <ul class="enumeration contacts">
             <li class="contacts-item">
               <a
@@ -51,36 +115,6 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="menu-mobile">
-        <ul class="enumeration">
-          <li class="nav-item">
-            <a href="" class="nav-link current">Студия</a>
-          </li>
-          <li class="nav-item">
-            <a href="./portfolio.html" class="nav-link">Портфолио</a>
-          </li>
-          <li class="nav-item"><a href="" class="nav-link">Контакты</a></li>
-        </ul>
-
-        <ul class="enumeration">
-          <li class="contacts-item">
-            <a href="mailto:info@devstudio.com" class="contacts-link envelope">
-              <svg class="contacts-images" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts-item">
-            <a href="tel:+380991111111" class="contacts-link smartphone">
-              <svg class="contacts-images" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
     <!--Конец header-->
@@ -763,6 +797,7 @@
     </footer>
     <!--Конец footer-->
     <!-- modal.js -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

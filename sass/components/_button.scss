@@ -16,3 +16,35 @@
   text-align: center;
   letter-spacing: 0.06em;
 }
+
+.menu-button {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+
+  border: none;
+  background-color: transparent;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu-burger {
+  display: none;
+}
