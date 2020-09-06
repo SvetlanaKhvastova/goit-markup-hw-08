@@ -872,12 +872,12 @@ img {
 
 .mobile-nav-item .current::after {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
+  left: 0;
+  top: 0;
+  -webkit-transform: translatey(32px);
+          transform: translatey(32px);
   width: 100%;
   height: 4px;
   background: #2196f3;

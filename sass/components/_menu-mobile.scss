@@ -77,13 +77,12 @@
 
 .mobile-nav-item .current::after {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateY(15px);
+  left: 0;
+  top: 0;
+  transform: translatey(32px);
   width: 100%;
-  // width: 30px;
   height: 4px;
 
   background: $accent;
