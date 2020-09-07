@@ -21,13 +21,7 @@
 }
 
 .modal {
-  position: absolute;
   padding: 40px;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  transition: transform $time-hover-focus $time-function;
 
   width: 100%;
 
@@ -37,9 +31,24 @@
   border-radius: 4px;
 
   @include for-size(mobile) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    transition: transform $time-hover-focus $time-function;
     width: 100%;
     max-width: 450px;
   }
+
+  // @include for-size(tablet) {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+
+  //   transform: translate(-50%, -50%);
+  //   transition: transform $time-hover-focus $time-function;
+  // }
 
   @include for-size(desktop) {
     width: 100%;
