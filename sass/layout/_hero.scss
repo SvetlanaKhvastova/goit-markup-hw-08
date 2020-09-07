@@ -1,8 +1,11 @@
 .hero {
+  display: flex;
   max-width: 1600px;
-  min-height: 400px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
+
+  align-items: center;
 
   background-image: linear-gradient(
       to right,
@@ -48,7 +51,7 @@
   }
 
   @include for-size(desktop) {
-    min-height: 600px;
+    height: 600px;
 
     background-image: linear-gradient(
         to right,
@@ -71,23 +74,12 @@
 }
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  padding: 118px 60px;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-
-  @include for-size(desktop) {
-    padding-top: 200px;
-    padding-bottom: 280px;
-  }
 }
 
 .hero-title {
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 30px;
-  max-width: 360px;
   text-align: center;
 
   color: $secondary-text-color;
@@ -99,7 +91,6 @@
   text-transform: uppercase;
 
   @include for-size(desktop) {
-    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
