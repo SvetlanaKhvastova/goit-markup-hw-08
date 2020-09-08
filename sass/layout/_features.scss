@@ -21,25 +21,25 @@
 
 .features-point-element {
   &:not(:last-child) {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767.9px) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.9px) {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
     margin-bottom: 30px;
   }
 
   &:nth-child(2n) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.9px) {
       margin-right: 0;
     }
   }
 
   &:nth-last-child(-n + 2) {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199.9px) {
       margin-bottom: 0;
     }
   }
